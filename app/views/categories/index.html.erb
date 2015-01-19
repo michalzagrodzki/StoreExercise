@@ -1,1 +1,9 @@
 <h1> Element Categories </h1>
+
+<ul>
+  <% @categories.each do |category| %>
+    <li>
+      <% category.name %>
+    </li>
+  <% end %>
+</ul>
