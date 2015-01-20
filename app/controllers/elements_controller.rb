@@ -1,6 +1,6 @@
 class ElementsController < ApplicationController
 
-  before_action :fetch_element, only: { :show, :edit, :update, :destroy }
+  before_action :fetch_element, only: [ :show, :edit, :update, :destroy ]
   def show
     @element = Element.find(params[:id])
 
