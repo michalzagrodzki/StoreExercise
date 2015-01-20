@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
+  # Set resources
   resources :categories, :elements
+
+  # Set the index route when entering page
+  root to: "categories#index"
+
+  #Custom root for all categories
+  get "/allcategories", to: "categories#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
