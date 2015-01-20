@@ -37,6 +37,12 @@ class ElementsController < ApplicationController
 
   end
 
+
+  def toggle_featured
+    
+  end
+
+
   private
     def fetch_element
       @element = Element.find(params[:id])
