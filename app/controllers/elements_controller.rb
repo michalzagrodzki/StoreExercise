@@ -1,6 +1,6 @@
 class ElementsController < ApplicationController
 
-  before_action :fetch_element, only: [ :show, :edit, :update, :destroy ]
+  before_action :fetch_element, only: [ :show, :edit, :update, :destroy, :toggle_featured ]
   def show
     @element = Element.find(params[:id])
 
@@ -39,7 +39,9 @@ class ElementsController < ApplicationController
 
 
   def toggle_featured
-    
+    #flips feature value
+    @element.toggle!( :featured )
+    redirect_to @element
   end
 
 
