@@ -41,6 +41,8 @@ class ElementsController < ApplicationController
   def toggle_featured
     #flips feature value
     @element.toggle!( :featured )
+    #message for succesful change
+    flash[:notice] = "Succesful change"
     redirect_to @element
   end
 
