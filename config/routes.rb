@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   # Set the index route when entering page
   root to: "categories#index"
 
-  #Custom root for all categories
+  # Custom root for all categories
   get "/allcategories", to: redirect("/")
+
+  # Route for action toggle feature
+  get "/elements/:id/toggle_featured" to: "elements#toggle_featured"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
