@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "/allcategories", to: redirect("/")
 
   # Route for action toggle feature
-  get "/elements/:id/toggle_featured" to: "elements#toggle_featured"
+  get "/elements/:id/toggle_featured", to: "elements#toggle_featured", as: :toggle_featured
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
