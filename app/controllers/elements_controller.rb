@@ -1,5 +1,6 @@
 class ElementsController < ApplicationController
 
+  before_action :fetch_element, only: { :show, :edit, :update, :destroy }
   def show
     @element = Element.find(params[:id])
 
@@ -19,5 +20,26 @@ class ElementsController < ApplicationController
     end
 
   end
-  
+
+  def new
+
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
+  end
+
+  private
+    def fetch_element
+      @element = Element.find(params[:id])
+    end
+
 end
