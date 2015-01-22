@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   # Route for action toggle feature
   get "/elements/:id/toggle_featured", to: "elements#toggle_featured", as: :toggle_featured
 
+  # Route for special elements
+  get "/special_elements", to: "elements#special_elements"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
