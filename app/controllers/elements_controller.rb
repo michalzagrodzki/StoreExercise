@@ -46,6 +46,10 @@ class ElementsController < ApplicationController
     redirect_to @element
   end
 
+  def special_elements
+    session[:vip] = true
+    redirect_to root_path
+  end
 
   private
     def fetch_element
